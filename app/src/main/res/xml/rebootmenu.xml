@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Reboot Menu Style" android:key="aurora_power_menu_mode" android:defaultValue="true" android:summaryOn="Marshmallow Style on" android:summaryOff="Lollipop Style on" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Shutdown" android:key="killprocess_power_menu_power" android:defaultValue="false" android:summaryOn="Shutdown Button Shown" android:summaryOff="Shutdown Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Mobile Data" android:key="killprocess_power_menu_data" android:defaultValue="false" android:summaryOn="Mobile Data Button Shown" android:summaryOff="Mobile Data Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Flight Mode (only for Lollipop Style)" android:key="killprocess_power_menu_airplane" android:defaultValue="false" android:summaryOn="Flight Mode Button Shown" android:summaryOff="Flight Mode Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Restart" android:key="killprocess_power_menu_restart" android:defaultValue="false" android:summaryOn="Restart Button Shown" android:summaryOff="Restart Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Screenshot" android:key="killprocess_power_menu_screenshot" android:defaultValue="false" android:summaryOn="Screenshot Button Shown" android:summaryOff="Screenshot Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Flashlight" android:key="killprocess_power_menu_flashlight" android:defaultValue="false" android:summaryOn="Flashlight mode will be shown" android:summaryOff="Currently removed" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Screen Recorder" android:key="killprocess_power_menu_screenrecord" android:defaultValue="false" android:summaryOn="Screen Recorder Button Shown" android:summaryOff="Screen Recorder Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Emergency" android:key="killprocess_power_menu_emergency" android:defaultValue="false" android:summaryOn="Emergency Button Shown" android:summaryOff="Emergency Button Hidden" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Ringtone (only for Lollipop Style)" android:key="killprocess_power_menu_mode" android:defaultValue="false" android:summaryOn="Ringtone Button Shown" android:summaryOff="Ringtone Button Hidden" />
+</PreferenceScreen>

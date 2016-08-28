@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Color Settings">
+        <PreferenceScreen android:title="Lockscreen Colors" android:summary="Set your colors here">
+            <PreferenceCategory android:title="Clock Coloring Master Switches" />
+            <PreferenceCategory android:title="  ** Turn Theme Colors off to use theme colors" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Clock Theme Colors *" android:key="theme_override" android:defaultValue="true" android:summaryOn="Custom colors Enabled" android:summaryOff="Custom colors Disabled - trying to use theme colors if one is active" app:packageNameToKill="com.android.systemui" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Clock Global Color" android:key="kg_clock_global_toggle" android:dependency="theme_override" android:defaultValue="false" android:summaryOn="Enabled.  Clock and date all use the same color." android:summaryOff="Disabled.  Clock and date can use individual colors." />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Clock Global Color" android:key="kg_clock_global_color" android:summary="Set single color" android:dependency="kg_clock_global_toggle" android:defaultValue="\#ffffffff" />
+            <PreferenceCategory android:title="Individual Clock Colors" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Clock Hours" android:key="kg_clock_hours_color" android:summary="Choose your color" android:dependency="theme_override" android:defaultValue="\#ff6dffb6" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Clock Minutes" android:key="kg_clock_minutes_color" android:summary="Choose your color" android:dependency="theme_override" android:defaultValue="\#ffd3ff50" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Clock Seconds" android:key="kg_clock_seconds_color" android:summary="Choose your color" android:dependency="theme_override" android:defaultValue="\#ffff5c5c" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Lockscreen Date" android:key="kg_date_color" android:summary="Choose date color" android:dependency="theme_override" android:defaultValue="\#ffffb66b" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Clock and Date Settings">
+        <PreferenceScreen android:title="Lockscreen Clock and Date Options" android:summary="Set features, sizes and more">
+            <PreferenceCategory android:title="Lockscreen Clock" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Custom Font Style" android:key="use_lockscreen_clock_font_style" android:defaultValue="false" android:summaryOn="Custom font enabled.  This may not work if a custom theme is installed." android:summaryOff="Disabled" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_font_style_entries" android:title="Font Style" android:key="lockscreen_clock_font_style" android:dependency="use_lockscreen_clock_font_style" android:defaultValue="1" android:entryValues="@array/lockscreen_font_style_values" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Add Seconds to Clock" android:key="lock_seconds" android:defaultValue="true" android:summaryOn="Feature enabled." android:summaryOff="Feature disabled." />
+            <PreferenceCategory android:title="Scaled Resizing" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Clock Scaling On/Off Toggle *" android:key="scaling_toggle" android:defaultValue="false" android:summaryOn="On" android:summaryOff="Off" app:packageNameToKill="com.android.systemui" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Clock Scaling" android:key="lockscreen_clock_scale" android:summary="Adjust clock size" android:dependency="scaling_toggle" android:defaultValue="300" app:minValue="150" app:maxValue="400" app:unitsValue="dp" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Clock Scaling Seconds" android:key="seconds_clock_scale" android:summary="Adjust Seconds size" android:dependency="scaling_toggle" android:defaultValue="170" app:minValue="100" app:maxValue="325" app:unitsValue="dp" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Clock Scaling Date" android:key="date_clock_scale" android:summary="Adjust Date size" android:dependency="scaling_toggle" android:defaultValue="70" app:minValue="50" app:maxValue="150" app:unitsValue="dp" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Lockscreen Elements">
+        <PreferenceScreen android:title="Show/Hide LockScreen Elements" android:summary="Customize what displays on lockscreen">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/lockscreen_notif_entries" android:title="Notifications Shown on Lockscreen" android:key="lockscreen_notifications" android:summary="Number shown on lockscreen" android:defaultValue="3" android:entryValues="@array/lockscreen_notif_values" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Phone shortcut in Lockscreen" android:key="set_shortcuts_phone" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Camera shortcut in Lockscreen" android:key="set_shortcuts_mode" android:defaultValue="true" android:summaryOn="Shown" android:summaryOff="Hidden" />
+            <PreferenceScreen android:title="Next Alarm">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Display Next Alarm" android:key="next_alarm" android:defaultValue="false" android:summaryOn="Shown." android:summaryOff="Hidden" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Next Alarm Text Color *" android:key="next_alarm_color" android:summary="Choose alarm color" android:dependency="next_alarm" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="Carrier Label" android:summary="Custom carrier text">
+                <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Use Custom Carrier Text" android:key="custom_lock_carrier" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+                <com.wubydax.romcontrol.v2.prefs.MyEditTextPreference android:title="Carrier Custom Text" android:key="custom_lock_carrier_text" android:summary="Edit carrier label" android:dependency="custom_lock_carrier" android:defaultValue="" android:dialogTitle="Set Custom Text" />
+                <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Carrier Color" android:key="carrier_color" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+            </PreferenceScreen>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Lockscreen flashlight">
+        <PreferenceScreen android:title="Lockscreen flashlight" android:summary="On/Off flashlight outside lockscreen">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Lock screen flashlight" android:key="torchlight_enable" android:summary="Press and hold the volume up key while the screen is off to turn on the flashlight" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/torchlight_timeout_entries" android:title="Flashlight timeout" android:key="torchlight_timeout" android:entryValues="@array/torchlight_timeout_values" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Lockscreen Rotation *" android:key="lockscreen_rotate" android:defaultValue="false" android:summaryOn="Lockscreen rotation enabled.  Rotation must also be enabled in the main toggles for this feature to work." android:summaryOff="Lockscreen rotation disabled" app:packageNameToKill="com.android.systemui" />
+</PreferenceScreen>

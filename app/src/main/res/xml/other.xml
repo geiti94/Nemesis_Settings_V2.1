@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:title="Fast Charging" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Adaptive Fast Charging" android:key="adaptive_fast_charging" android:defaultValue="true" android:summaryOn="Adaptive fast charging enabled" android:summaryOff="Adaptive fast charging disabled" />
+    <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Wireless Fast Charging" android:key="wireless_fast_charging" android:defaultValue="true" android:summaryOn="Wireless fast charging enabled" android:summaryOff="Wireless fast charging disabled" />
+    <PreferenceCategory android:title="Touchwiz Effects and Functions">
+        <PreferenceScreen android:title="Touchwiz Gestures" android:summary="Set screen gestures for custom actions.">
+            <PreferenceCategory android:title="Gesture anywhere on Home screen" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Double tap" android:key="doubletap" android:defaultValue="24" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Up" android:key="swipe_up" android:defaultValue="24" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/launcher_gesture_entries" android:title="Swipe Down" android:key="swipe_down" android:defaultValue="24" android:entryValues="@array/launcher_gesture_values" app:packageNameToKill="com.sec.android.app.launcher" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Touchwiz Page Transition Effects" android:summary="Set transition effects for the Touchwiz Launcher">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/tw_effect_entries" android:title="Touchwiz Page Effect" android:key="tw_page_effect" android:defaultValue="1" android:entryValues="@array/tw_effect_values" app:packageNameToKill="com.sec.android.app.launcher" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="Touchwiz Wallpaper Effect">
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Wallpaper Tilt Effect" android:key="wallpaper_tilt_status" android:defaultValue="true" android:summaryOn="Feature Enabled  \n> This provides a movement effect for the desktop wallpaper." android:summaryOff="Feature Disabled  \n> This provides a movement effect for the desktop wallpaper." />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notifications">
+        <PreferenceScreen android:title="Notifications and Dialogue" android:summary="Select options">
+            <PreferenceCategory android:title="Notifications and Dialogue" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Heads Up Notifications" android:key="heads_up_notifications_enabled" android:defaultValue="true" android:summaryOn="Heads up enabled" android:summaryOff="Heads up disabled" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Do not Disturb" android:key="dnd_toggle" android:defaultValue="true" android:summaryOn="Dnd notifications enabled" android:summaryOff="Dnd notifications disabled" app:packageNameToKill="com.android.systemui" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Low Battery Notifications" android:key="battery_notif" android:defaultValue="true" android:summaryOn="Low battery warnings are enabled" android:summaryOff="Low battery warnings are disabled" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Full Battery Notifications" android:key="battery_full_notif" android:defaultValue="true" android:summaryOn="Full battery notification enabled" android:summaryOff="Full battery notification disabled" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Ongoing Media Connected Pulldown Notification" android:key="media_connect_notif" android:defaultValue="true" android:summaryOn="Notification is shown" android:summaryOff="Notification is disabled" app:rebootDevice="true" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Ongoing Charging Pulldown Notification" android:key="charging_notif" android:defaultValue="true" android:summaryOn="Notification is shown" android:summaryOff="Notification is disabled" />
+            <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Mobile Data Popup" android:key="mobile_data_toggle" android:defaultValue="true" android:summaryOn="Confirmation Popup enabled" android:summaryOff="Confirmation Popup disabled" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="QuickLaunch" />
+    <PreferenceScreen android:title="QuickLaunch Bar in Recent Apps" android:summary="Configure QuickLaunch Options">
+        <PreferenceCategory android:title="QuickLaunch for Recent Apps Panel" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="QuickLaunch On/Off" android:key="quick_launch_visible2" android:defaultValue="false" android:summaryOn="Option enabled" android:summaryOff="Option disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="QuickLaunch Background Color" android:key="quick_launch_background_color2" android:summary="Choose your color" android:defaultValue="-1101481985" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="QuickLaunch Text Color" android:key="quick_launch_text_color2" android:summary="Choose letter color" android:defaultValue="-1" hexValue="true" alphaSlider="false" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Flip this switch to set colors" android:key="quick_launch_show_devider2" android:defaultValue="true" />
+    </PreferenceScreen>
+    <PreferenceCategory android:title="Multiwindow">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Multiwindow" android:key="multi_window_enabled" android:defaultValue="false" android:summaryOn="Multiwindow enabled \n> Enabling Multiwindow will disable mapping left longpress to a custom function." android:summaryOff="Multiwindow disabled \n> With Multiwindow disabled, you can now use a custom key mapping for left longpress." />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Multiwindow Always on After Reboot" android:key="multiwindow_enabled_always" android:defaultValue="false" android:summaryOn="Option enabled  \n> Multiwindow does not normally remain on after a reboot.  If you would like to keep it on always, turn this toggle on." android:summaryOff="Option disabled  \n> Multiwindow does not normally remain on after a reboot.  If you are just using it temporarily, just leave this option disabled." />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Other Display Features">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Multi-user Avatar" android:key="multiuser_avatar" android:defaultValue="false" android:summaryOn="Multi-user Avatar shown" android:summaryOff="Multi-user Avatar hidden" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Outdoor Mode" android:key="display_outdoor_mode" android:defaultValue="false" android:summaryOn="Enabled  \n> Outdoor mode provides full screen brightness for a period of 15 minutes." android:summaryOff="Disabled  \n> Outdoor mode provides full screen brightness for a period of 15 minutes." />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="USB Plugged/Unplugged Wake" android:key="no_wake_unplugged" android:defaultValue="true" android:summaryOn="Wake the phone when usb is plugged or unplugged." android:summaryOff="Do not Wake the phone when usb is pluggin in." />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Screen Pinning for Recent Apps" android:key="lock_to_app_enabled" android:defaultValue="false" android:summaryOn="Option is currently enabled" android:summaryOff="Option is currently disabled" />
+    </PreferenceCategory>
+</PreferenceScreen>
