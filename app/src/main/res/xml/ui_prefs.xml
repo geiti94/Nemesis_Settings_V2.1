@@ -48,6 +48,16 @@
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Vibrate/Silent Icon *" android:key="volume_icon" android:defaultValue="true" android:summaryOn="Sound icons now shown" android:summaryOff="Sound icons now hidden" app:packageNameToKill="com.android.systemui" />
         </PreferenceScreen>
     </PreferenceCategory>
+    <PreferenceCategory android:title="Statusbar Icon Colors"/>
+    <PreferenceScreen android:title="Statusbar Icon Colors" android:summary="Set your custom colors here">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Use global color" android:key="sb_global_toggle" android:defaultValue="false" android:summaryOn="Enabled now set your color" android:summaryOff="Disabled" app:packageNameToKill="com.android.systemui" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Statusbar Global Color" android:key="sb_global_color" android:summary="Pick universal color" android:dependency="sb_global_toggle" android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" />
+        <PreferenceCategory android:title="Individual Colors" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="WiFi Icon Color" android:key="statusbar_wifi_color" android:summary="Pick color of wifi icon" android:defaultValue="\#ffffffff" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Signalbar Icon Color" android:key="statusbar_signal_color" android:summary="Select color of signalbars" android:defaultValue="\#ffffffff" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Data Icon Color" android:key="statusbar_data_color" android:summary="3G/4G/LTE data icon color" android:defaultValue="\#ffffffff" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Notification Icons Color" android:key="statusbar_icon_color" android:summary="Volume, bluetooth, popups, etc.." android:defaultValue="\#ffffffff" app:packageNameToKill="com.android.systemui" />
+    </PreferenceScreen>
     <PreferenceCategory android:title="Dynamic StatusBar">
         <PreferenceScreen android:title="@string/dynamic_status_bar_title" android:summary="This really cool effect will blend the statusbar colors to adapt to the currently opened application.">
             <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Dynamic StatusBar Master Switch" android:key="dynamic_toggle" android:defaultValue="true" android:summaryOn="Dynamic StatusBar features enabled" android:summaryOff="Dynamic StatusBar features disabled" />

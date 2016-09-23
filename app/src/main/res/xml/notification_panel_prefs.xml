@@ -13,9 +13,7 @@
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle On Color" android:key="toggle_icon_on_color" android:summary="Set toggle On color" android:defaultValue="\#ff3b91dc" app:packageNameToKill="com.android.systemui" app:isSilent="false" hexValue="true" alphaSlider="true" />
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Toggle Off Color" android:key="toggle_icon_off_color" android:summary="Set toggle Off color" android:defaultValue="\#ffb8c6d3" app:packageNameToKill="com.android.systemui" app:isSilent="false" hexValue="true" alphaSlider="true" />
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Settings Button Color" android:key="pulldown_button_color" android:summary="Choose color" android:defaultValue="-1" alphaSlider="true" hexValue="true" />
-        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Brightness Background color On/Off (disable for Themes)" android:key="expanded_bg_colors" android:summaryOn="enabled" android:summaryOff="disabled" />
-        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Brightness background color" android:key="brightness_background_color" android:dependency="expanded_bg_colors" android:defaultValue="\#ff000000" alphaSlider="true" hexValue="true" />
-    </PreferenceScreen>
+        </PreferenceScreen>
     <PreferenceCategory android:title="Clock/Date Settings " />
     <PreferenceScreen android:title="Clock/Date Notifications panel" android:summary="Custom clock notification">
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Stock Clock" android:key="hide_header_stock_clock" android:summaryOn="Show" android:summaryOff="Hide" />
@@ -65,7 +63,6 @@
     </PreferenceCategory>
     <PreferenceCategory android:title="Notifications" />
     <PreferenceScreen android:title="Notifications" android:summary="Change text and bg colors">
-        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/shape_entries" android:title="Notification bg shape" android:key="notification_background_form" android:defaultValue="0" android:entryValues="@array/shape_values" />
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Notification bg color" android:key="notification_bg_color" android:defaultValue="0" />
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Notification Text Color" android:key="pulldown_text" android:summary="Choose text color" android:defaultValue="\#ff212121" />
         <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Heads Up Notifications" android:key="heads_up_notifications_enabled" android:defaultValue="true" android:summaryOn="Heads up enabled" android:summaryOff="Heads up disabled" app:packageNameToKill="com.android.systemui" />
